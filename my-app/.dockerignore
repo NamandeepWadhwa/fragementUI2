@@ -1,0 +1,9 @@
+.github/
+.vscode/
+node_modules/
+.env.local
+.eslintrc.js
+.git/
+.gitignore
+.prettier*
+jest*
