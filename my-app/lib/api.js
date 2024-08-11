@@ -56,10 +56,11 @@ console.log(contentType);
     const responseData = await res.json();
     const locationHeader = res.headers.get('location');
     if(res.status==415){
+      alert("Unsupported media type");
      throw new Error('Unsupported media type');
     }
     
-  
+    alert("Successfully uploaded the fragment");
     return responseData;
   } catch (err) {
     throw new Error('Unable to call POST /v1/fragment', { err });
@@ -168,7 +169,11 @@ export async function updateFragment(user, contentType, id, data) {
     if (!res.ok) {
       throw new Error(`${res.status} ${res.statusText}`);
     }
-
+    if(res.status==415){
+      alert("Unsupported media type");
+      throw new Error('Unsupported media type');
+    }
+    alert("Successfully updated the fragment");
     return true;
   } catch (err) {
     if (err.message.includes("400")) {

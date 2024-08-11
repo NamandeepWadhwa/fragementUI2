@@ -50,9 +50,9 @@ export default function Page() {
       contentType = format;
       try {
         await postUserFragments(user, format, data, contentType);
-        alert("Data posted successfully");
+        
       } catch (err) {
-        alert("There was an error posting the data");
+        
         console.error(err);
       }
     } else if (file) {
@@ -64,9 +64,9 @@ export default function Page() {
 
       try {
         await postUserFragments(user, contentType, binaryData);
-        alert("Data posted successfully");
+       
       } catch (err) {
-        alert("There was an error posting the data");
+       
         console.error(err);
       }
     };
