@@ -52,13 +52,16 @@ export default function Page() {
   }
 
 return (
-  <Container className="mx-5 my-3">
-    <h1>{user.username} Fragments</h1>
-   <Row>
+  <>
+  <div className="w-full flex items-center justify-center">
+    <h1 className="text-xl my-2">{user.username} Fragments</h1>
+    </div>
+   <div className="flex flex-wrap">
     {fragments.fragments.map((fragment, index) => (
       <Fragment key={index} id={fragment} reload={reloadFragments}/>
     ))}
-  </Row>
-  </Container>
+  </div>
+  </>
+  
 );
 }

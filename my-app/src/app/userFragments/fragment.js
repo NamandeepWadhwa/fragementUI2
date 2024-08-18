@@ -56,7 +56,7 @@ export default function Fragment({ id , reload}) {
 
   return (
     
-      <Col className="my-3" md={4}>
+      <div className="m-5 w-96">
         <p>Fragment ID: {fragment.fragment.id}</p>
         <p>Fragment Type: {fragment.fragment.type}</p>
         <p>Fragment Size: {fragment.fragment.size}</p>
@@ -75,7 +75,7 @@ export default function Fragment({ id , reload}) {
         <Button variant="primary" onClick={handleEdit}>
           Edit
         </Button>
-      </Col>
+      </div>
     
   );
 }

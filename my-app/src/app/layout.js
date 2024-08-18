@@ -33,12 +33,16 @@ export default function RootLayout({ children }) {
       <body>
         <div className="mx-3 h-24 relative flex items-center text-xl text-blue-800">
           <span className="mx-4">Fragments</span>
-          <a href="/" className="mx-4 hidden md:inline">
-            Home
-          </a>
-          <a href="/userFragments" className="mx-4 hidden md:inline">
-            My-Fragment
-          </a>
+          {user && (
+            <Link href="/" className="mx-4 hidden md:inline">
+              Home
+            </Link>
+          )}
+          {user && (
+            <Link href="/userFragments" className="mx-4 hidden md:inline">
+              My-Fragment
+            </Link>
+          )}
           {!user && (
             <button
               onClick={onLogin}
@@ -68,13 +72,27 @@ export default function RootLayout({ children }) {
             open ? "h-44 opacity-100" : "h-0 opacity-0"
           }`}
         >
-          <div className="m-3 flex-col text-xl text-blue-800">
-            <a href="/" className="block m-4">
-              Home
-            </a>
-            <a href="/userFragments" className="block m-4">
-              My-Fragment
-            </a>
+          <div
+            className={`m-3 flex-col text-xl text-blue-800 transition-all duration-300 ease-`}
+          >
+            {user && (
+              <Link
+                onClick={() => setOpen(false)}
+                href="/"
+                className="block m-4"
+              >
+                Home
+              </Link>
+            )}
+            {user && (
+              <Link
+                onClick={() => setOpen(false)}
+                href="/userFragments"
+                className="block m-4"
+              >
+                My-Fragment
+              </Link>
+            )}
             {!user && (
               <button
                 onClick={onLogin}

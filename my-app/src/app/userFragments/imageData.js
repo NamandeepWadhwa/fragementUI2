@@ -3,6 +3,7 @@ import { getFragmentById,getdifferentType } from "../../../lib/api"; // Function
 import { userAtom } from "../../../stateManagment/user";
 import { useAtom } from "jotai";
 import { Button } from "react-bootstrap";
+import Image from "next/image";
 
 
 export default function ImagePage({id}) {
@@ -65,10 +66,13 @@ export default function ImagePage({id}) {
       Webp
       </Button>{" "}
       <h1>Image Viewer</h1>
-      <img
+      <Image
         src={imageUrl}
-        alt="Uploaded"
-        style={{ maxWidth: "100%", height: "auto" }}
+        alt="Uploaded" 
+        className="object-cover"
+        width={500}
+        height={500}
+        
       />
     </div>
   );
