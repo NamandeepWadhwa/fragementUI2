@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Auth, getUser } from "../../lib/auth";
 import { useEffect, useState } from "react";
@@ -30,9 +31,11 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body>
+      <body className="flex flex-col min-h-screen">
         <div className="mx-3 h-24 relative flex items-center text-xl text-blue-800">
-          <span className="mx-4">Fragments</span>
+          <a href="/">
+            <span className="mx-4">Fragments</span>
+          </a>
           {user && (
             <Link href="/" className="mx-4 hidden md:inline">
               Home
@@ -41,6 +44,11 @@ export default function RootLayout({ children }) {
           {user && (
             <Link href="/userFragments" className="mx-4 hidden md:inline">
               My-Fragment
+            </Link>
+          )}
+          {user && (
+            <Link href="/about" className="mx-4 hidden md:inline">
+              About
             </Link>
           )}
           {!user && (
@@ -68,7 +76,7 @@ export default function RootLayout({ children }) {
         </div>
 
         <div
-          className={`transition-all duration-300 ease-in-out overflow-hidden ${
+          className={` block md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
             open ? "h-44 opacity-100" : "h-0 opacity-0"
           }`}
         >
@@ -112,7 +120,38 @@ export default function RootLayout({ children }) {
           </div>
         </div>
 
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
+        <footer className="border-t-2 border-blue-800 border-solid">
+          <div className="flex flex-col items-center h-1/2 my-10 justify-center">
+            <div className="my-3">
+              <p className="text-xl text-blue-800">
+                Checkou my GitHub and connect with me on Linkedin{" "}
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="mx-5">
+                <a href="https://github.com/NamandeepWadhwa">
+                  <Image
+                    src="/github.png"
+                    alt="Github"
+                    width={100}
+                    height={100}
+                  />
+                </a>
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/in/namansinghwadhwa/">
+                  <Image
+                    src="/linkedin.png"
+                    alt="Github"
+                    width={100}
+                    height={100}
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
