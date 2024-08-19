@@ -33,9 +33,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="flex flex-col min-h-screen">
         <div className="mx-3 h-24 relative flex items-center text-xl text-blue-800">
-          <a href="/">
+          <Link href="/">
             <span className="mx-4">Fragments</span>
-          </a>
+          </Link>
           {user && (
             <Link href="/" className="mx-4 hidden md:inline">
               Home
@@ -46,11 +46,11 @@ export default function RootLayout({ children }) {
               My-Fragment
             </Link>
           )}
-          {user && (
-            <Link href="/about" className="mx-4 hidden md:inline">
-              About
-            </Link>
-          )}
+
+          <Link href="/about" className="mx-4 hidden md:inline">
+            About
+          </Link>
+
           {!user && (
             <button
               onClick={onLogin}
@@ -101,6 +101,13 @@ export default function RootLayout({ children }) {
                 My-Fragment
               </Link>
             )}
+            <Link
+              onClick={() => setOpen(false)}
+              href="/about"
+              className="block m-4"
+            >
+              About
+            </Link>
             {!user && (
               <button
                 onClick={onLogin}
