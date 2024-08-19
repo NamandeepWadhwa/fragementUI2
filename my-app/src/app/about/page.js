@@ -2,10 +2,10 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <div className="flex flex-col  items-center flex-wrap m-3 ">
-        <p className="text-3xl text-blue-800">About Fragment microservice </p>
+      <div className="flex flex-col  items-center justify-center flex-wrap m-3 ">
+        <p className=" text-xl md:text-3xl text-blue-800">About Fragment microservice </p>
 
-        <p className="text-xl text-blue-800 block my-10 w-1/2">
+        <p className="text-sm md:text-xl text-blue-800 block my-10 w-1/2">
           Welcome to my final project for the course "Cloud Computing for
           Programmers." Throughout this project, I gained valuable new skills,
           which are highlighted below. In essence, this website allows you to
@@ -13,7 +13,7 @@ export default function Page() {
           formats. I utilized AWS to accomplish these features.
         </p>
         <div>
-          <h1 className="text-4xl text-blue-800"> Technologies Used/learned</h1>
+          <h1 className="text-xl md:text-4xl text-blue-800"> Technologies Used/learned</h1>
         </div>
       </div>
       <div className="flex flex-wrap justify-around m-5">

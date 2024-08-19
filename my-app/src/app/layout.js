@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
               Login
             </button>
           )}
-          
+
           {user && (
             <button
               onClick={onLogout}
@@ -117,7 +117,7 @@ export default function RootLayout({ children }) {
                 Login
               </button>
             )}
-            
+
             {user && (
               <button
                 onClick={onLogout}
@@ -132,10 +132,8 @@ export default function RootLayout({ children }) {
         <main className="flex-1">{children}</main>
         <footer className="border-t-2 border-blue-800 border-solid">
           <div className="flex flex-col items-center h-1/2 my-10 justify-center">
-            <div className="my-3">
-              <p className="text-xl text-blue-800">
-                Checkou my GitHub and connect with me on Linkedin{" "}
-              </p>
+            <div className="my-3 flex justify-center items-start text-blue-800">
+              Checkou my GitHub and connect with me on Linkedin
             </div>
             <div className="flex justify-center">
               <div className="mx-5">
