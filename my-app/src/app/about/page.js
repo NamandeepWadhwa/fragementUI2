@@ -3,9 +3,11 @@ export default function Page() {
   return (
     <>
       <div className="flex flex-col  items-center justify-center flex-wrap m-3 ">
-        <p className=" text-xl md:text-3xl text-blue-800">About Fragment microservice </p>
+        <p className=" text-xl md:text-3xl text-blue-800">
+          About Fragment microservice{" "}
+        </p>
 
-        <p className="text-sm md:text-xl text-blue-800 block my-10 w-1/2">
+        <p className="text-base md:text-xl text-blue-800 block my-10 w-1/2">
           Welcome to my final project for the course "Cloud Computing for
           Programmers." Throughout this project, I gained valuable new skills,
           which are highlighted below. In essence, this website allows you to
@@ -13,7 +15,10 @@ export default function Page() {
           formats. I utilized AWS to accomplish these features.
         </p>
         <div>
-          <h1 className="text-xl md:text-4xl text-blue-800"> Technologies Used/learned</h1>
+          <h1 className="text-xl md:text-4xl text-blue-800">
+            {" "}
+            Technologies Used/learned
+          </h1>
         </div>
       </div>
       <div className="flex flex-wrap justify-around m-5">
@@ -28,7 +33,7 @@ export default function Page() {
           </div>
         </div>
         <div className="flex justify-start flex-wrap md:w-1/2">
-          <h1 className="text-xl text-blue-800 ">
+          <h1 className="text-base md:text-xl text-blue-800 ">
             In this project, I leveraged several AWS services to build a robust
             and scalable application. AWS Cognito was used for user
             authentication and management, ensuring secure access to the
@@ -56,7 +61,7 @@ export default function Page() {
           </div>
         </div>
         <div className="flex justify-start flex-wrap md:w-1/2">
-          <h1 className="text-xl text-blue-800 ">
+          <h1 className="text-base md:text-xl text-blue-800 ">
             In this project, Docker played a crucial role in containerizing the
             application, ensuring consistency across different environments. I
             set up a CI/CD pipeline using GitHub Actions to automate the
@@ -82,7 +87,7 @@ export default function Page() {
           </div>
         </div>
         <div className="flex justify-start flex-wrap md:w-1/2">
-          <h1 className="text-xl text-blue-800 ">
+          <h1 className="text-base md:text-xl text-blue-800 ">
             To ensure the reliability of the application, I implemented
             comprehensive testing using Jest and Hurl. Jest was used for unit
             testing, achieving 90% coverage to verify that individual components
