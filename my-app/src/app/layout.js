@@ -59,6 +59,7 @@ export default function RootLayout({ children }) {
               Login
             </button>
           )}
+          
           {user && (
             <button
               onClick={onLogout}
@@ -77,7 +78,7 @@ export default function RootLayout({ children }) {
 
         <div
           className={` block md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-            open ? "h-44 opacity-100" : "h-0 opacity-0"
+            open ? "h-56 opacity-100" : "h-0 opacity-0"
           }`}
         >
           <div
@@ -116,6 +117,7 @@ export default function RootLayout({ children }) {
                 Login
               </button>
             )}
+            
             {user && (
               <button
                 onClick={onLogout}
