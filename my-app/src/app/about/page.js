@@ -2,12 +2,12 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <div className="flex flex-col  items-center justify-center flex-wrap m-3 ">
+      <div className="flex flex-col  items-center justify-center  m-3  ">
         <p className=" text-xl md:text-3xl text-blue-800">
           About Fragment microservice{" "}
         </p>
 
-        <p className="text-base md:text-xl text-blue-800 block my-10 w-1/2">
+        <p className="text-base md:text-xl text-blue-800 block my-10 text-center max-w-5xl" >
           Welcome to my final project for the course "Cloud Computing for
           Programmers." Throughout this project, I gained valuable new skills,
           which are highlighted below. In essence, this website allows you to

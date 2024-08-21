@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
           }`}
         >
           <div
-            className={`m-3 flex-col text-xl text-blue-800 transition-all duration-300 ease-`}
+            className={`mx-3 flex-col text-xl text-blue-800 transition-all duration-300 ease-`}
           >
             {user && (
               <Link
@@ -130,10 +130,10 @@ export default function RootLayout({ children }) {
         </div>
 
         <main className="flex-1">{children}</main>
-        <footer className="border-t-2 border-blue-800 border-solid">
-          <div className="flex flex-col items-center h-1/2 my-10 justify-center">
-            <div className="my-3 flex justify-center items-start text-blue-800">
-              Checkou my GitHub and connect with me on Linkedin
+        <footer className="border-t-2 border-slate-500 border-solid">
+          <div className="flex flex-col items-center h-1/2 my-3 mx-2 justify-center">
+            <div className="mb-3 text-2xl flex text-center text-blue-800">
+              Checkout my GitHub and connect with me on Linkedin
             </div>
             <div className="flex justify-center">
               <div className="mx-5">
