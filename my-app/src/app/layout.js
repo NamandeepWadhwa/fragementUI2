@@ -84,7 +84,7 @@ export default function RootLayout({ children }) {
           <div
             className={`mx-3 flex-col text-xl text-blue-800 transition-all duration-300 ease-`}
           >
-            {user && (
+            
               <Link
                 onClick={() => setOpen(false)}
                 href="/"
@@ -92,7 +92,7 @@ export default function RootLayout({ children }) {
               >
                 Home
               </Link>
-            )}
+          
             {user && (
               <Link
                 onClick={() => setOpen(false)}
